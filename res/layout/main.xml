@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
->
-    <TextView
-            android:layout_width="fill_parent"
+                android:id="@+id/root">
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/mid" android:layout_centerInParent="true">
+    </RelativeLayout>
+    <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World, StarterActivity"
-    />
-</LinearLayout>
+            android:id="@+id/scrollView" android:layout_above="@+id/mid" android:layout_alignParentTop="true">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"/>
+    </ScrollView>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Append text"
+            android:id="@+id/append_button" android:layout_centerHorizontal="true" android:layout_below="@+id/mid"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Check file"
+            android:id="@+id/check_file_button" android:layout_centerHorizontal="true" android:layout_below="@+id/append_button"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete file"
+            android:id="@+id/delete_file_button" android:layout_centerHorizontal="true"
+            android:layout_below="@+id/check_file_button"/>
+</RelativeLayout>
 
