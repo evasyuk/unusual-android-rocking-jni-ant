@@ -1,4 +1,3 @@
-
 APP_ABI = armeabi armeabi-v7a x86 # all
 APP_PLATFORM := android-15
 APP_OPTIM := debug
